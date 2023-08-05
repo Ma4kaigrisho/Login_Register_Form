@@ -1,0 +1,63 @@
+@keyframes loginLeave {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes registerLeave {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes registerEnter {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes loginEnter {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+body {
+  background-color: aliceblue;
+}
+
+.slideLeftRegister {
+  animation: registerEnter 1s;
+  animation-fill-mode: forwards;
+}
+
+.slideLeftLogin {
+  animation: loginLeave 1s;
+  animation-fill-mode: forwards;
+}
+
+.slideRightRegister {
+  animation: rigisterLeave 1s;
+  animation-fill-mode: forwards;
+}
+
+.slideRightLogin {
+  animation: loginEnter 1s;
+  animation-fill-mode: forwards;
+}

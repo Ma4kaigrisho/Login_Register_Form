@@ -1,0 +1,22 @@
+@import 'animations';
+body{
+    background-color: aliceblue;
+}
+.slideLeftRegister{
+    animation: registerEnter 1s;
+    animation-fill-mode: forwards;
+
+}
+.slideLeftLogin{
+    animation: loginLeave 1s;
+    animation-fill-mode: forwards;
+}
+.slideRightRegister{
+    animation: rigisterLeave 1s;
+    animation-fill-mode: forwards;
+
+}
+.slideRightLogin{
+    animation: loginEnter 1s;
+    animation-fill-mode: forwards;
+}
