@@ -1,8 +1,10 @@
 $(document).ready(function(){
-    $("#login-form").submit(function(event){
+    $("form").submit(function(event){
         event.preventDefault();
     })
     $("#req-appear").on("click",function(){
+        $(".login").removeClass("slideRightLogin")
+        $(".register").removeClass("slideRightRegister")
         $(".login").addClass("slideLeftLogin")
         setTimeout(function(){
             $(".login").addClass("d-none");
@@ -11,15 +13,13 @@ $(document).ready(function(){
         }, 1000)
     })
     $("#log-appear").on("click",function(){
-        $(".register").removeClass("slideLeftRegister");
-  $(".register").addClass("slideRightRegister");
-  $(".register").on("animationend", function() {
-    $(this).addClass("d-none");
-    $(".login").addClass("slideRightLogin");
-    setTimeout(function() {
-      $(".login").removeClass("d-none");
-    }, 1000); // Adjust the delay as needed for the slideRightLogin animation
-    $(this).off("animationend");
-  });
+        $(".register").removeClass("slideLeftRegister")
+        $(".register").addClass("slideRightRegister")
+        setTimeout(function(){
+            $(".register").addClass("d-none");
+            $(".login").removeClass("slideLeftLogin").removeClass("d-none");
+            $(".login").addClass("slideRightLogin")
+
+        },1000)
     })
 })
