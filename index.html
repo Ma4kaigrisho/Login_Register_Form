@@ -10,14 +10,14 @@
 <body>
     <div class="container login my-5 border rounded p-5">
         <form id="login-form">
-            <h2>Login</h2>
-            <div class="mb-3">
-              <label class="form-label">Username</label>
-              <input type="name" class="form-control">
+            <h2 class="my-5">Login</h2>
+            <div class="mb-3 input-log">
+              <input type="name" class="form-control border-0 border-bottom bg-transparent rounded-0" placeholder=" ">
+              <label class="form-label" id="username ">Username</label>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 input-log">
+              <input type="password" class="form-control border-0 border-bottom bg-transparent rounded-0" placeholder=" ">
               <label class="form-label">Password</label>
-              <input type="password" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="submit" class="btn btn-secondary" id="req-appear">Register</button>
@@ -26,22 +26,22 @@
     <div class="container register my-5 border rounded p-5 d-none">
         <form>
             <h2>Register</h2>
-            <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="name" class="form-control">
+            <div class="mb-3 input-log">
+              <input type="name" class="form-control border-0 border-bottom bg-transparent rounded-0" placeholder=" ">
+              <label class="form-label">Username</label>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div class="mb-3 input-log">
+              <input type="email" class="form-control border-0 border-bottom bg-transparent rounded-0" placeholder=" " id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Phone number</label>
-                <input type="email" class="form-control">
+            <div class="mb-3 input-log">
+              <input type="email" class="form-control border-0 border-bottom bg-transparent rounded-0" placeholder=" ">
+              <label class="form-label">Phone number</label>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 input-log">
+              <input type="password" class="form-control border-0 border-bottom bg-transparent rounded-0" placeholder=" ">
               <label class="form-label">Password</label>
-              <input type="password" class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
             <button type="submit" class="btn btn-secondary" id="log-appear">Login</button>
