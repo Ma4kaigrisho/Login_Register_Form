@@ -67,7 +67,7 @@ body {
   flex-direction: column;
   position: relative;
   transition: all 300ms ease !important;
-  margin-top: 50px;
+  margin-top: 35px;
 }
 .input-log input {
   transition: all 300ms ease !important;

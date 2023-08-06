@@ -19,7 +19,11 @@ $(document).ready(function(){
             $(".register").addClass("d-none");
             $(".login").removeClass("slideLeftLogin").removeClass("d-none");
             $(".login").addClass("slideRightLogin")
+            $(".alert").addClass("d-none")
 
         },1000)
+    })
+    $("#reg").on("click", function(){
+        $(".alert").removeClass("d-none")
     })
 })
