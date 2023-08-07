@@ -25,7 +25,7 @@ $(document).ready(function(){
     })
     $("#reg").on("click", function(){
         $(".alert").removeClass("d-none")
-    
+    })
     $("button").on("click",function(){
         $(this).append(`<span class="ripple"></span>`);
     })
