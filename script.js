@@ -22,4 +22,7 @@ $(document).ready(function(){
 
         },1000)
     })
+    $("button").on("click",function(){
+        $(this).append(`<span class="ripple"></span>`);
+    })
 })

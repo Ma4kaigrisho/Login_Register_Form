@@ -41,4 +41,12 @@ body{
         position: absolute;
     }
 }
+button:hover{
+    background: linear-gradient(90deg,#d50fff, #44199a);
+}
+.ripple{
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 1s;
+}
 
