@@ -91,12 +91,18 @@ body {
   position: absolute;
 }
 
+button {
+  cursor: pointer;
+}
+
 button:hover {
   background: linear-gradient(90deg, #d50fff, #44199a);
 }
 
-.ripple {
+button .btn-ripple {
   background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  border-radius: 100%;
   transform: scale(0);
-  animation: ripple 1s;
+  animation: ripple 1s forwards;
 }

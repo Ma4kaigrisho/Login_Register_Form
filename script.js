@@ -27,27 +27,30 @@ $(document).ready(function(){
         $(".alert").removeClass("d-none")
     })
     function RippleStyle(width, height, posX, posY){
-        this.width = (width <= height) ? height : width;
-        this.height = (width <= height) ? height : width;
-        this.top = posY - (this.height * .5);
-        this.left = posX - (this.width * .5);
+        this.width = ( width <= height ) ? height : width;
+        this.height = ( width <= height ) ? height : width;
+        this.top = posY - (this.height * 0.5);
+        this.left = posX - (this.width * 0.5);
     }
-    $("button").on("click",function(e){
-        let rippleEl = $(this).append(`<span class="ripple"></span>`);
+    $("button").on("mousedown",function(e){
+        var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
+        console.log("Ripple element created: ", rippleEl);
 
-        let pos = $(this).offset();
+        var pos = $(this).offset();
+        console.log("Position: ", pos);
 
-        let width = $(this).outerWidth();
-        let height = $(this).outerHeight();
+        var width = $(this).outerWidth();
+        var height = $(this).outerHeight();
 
-        let posX = e.pageX - pos.left;
-        let posY = e.pageY - pos.top
+        var posX = e.pageX - pos.left;
+        var posY = e.pageY - pos.top;
+        console.log("Width: ", width, "Height: ", height);
 
-        let rippleStyle = new RippleStyle(width, height, posX, posY);
-
+        var rippleStyle = new RippleStyle(width, height, posX, posY);
+        console.log("Ripple style: ", rippleStyle);
         rippleEl.css(rippleStyle);
     })
-    $("button").on("animationend",".ripple", function(){
+    $('.btn').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.btn-ripple', function(){
         $(this).remove();
-    });
+      });
 })
