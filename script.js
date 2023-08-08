@@ -26,7 +26,28 @@ $(document).ready(function(){
     $("#reg").on("click", function(){
         $(".alert").removeClass("d-none")
     })
-    $("button").on("click",function(){
-        $(this).append(`<span class="ripple"></span>`);
+    function RippleStyle(width, height, posX, posY){
+        this.width = (width <= height) ? height : width;
+        this.height = (width <= height) ? height : width;
+        this.top = posY - (this.height * .5);
+        this.left = posX - (this.width * .5);
+    }
+    $("button").on("click",function(e){
+        let rippleEl = $(this).append(`<span class="ripple"></span>`);
+
+        let pos = $(this).offset();
+
+        let width = $(this).outerWidth();
+        let height = $(this).outerHeight();
+
+        let posX = e.pageX - pos.left;
+        let posY = e.pageY - pos.top
+
+        let rippleStyle = new RippleStyle(width, height, posX, posY);
+
+        rippleEl.css(rippleStyle);
     })
+    $("button").on("animationend",".ripple", function(){
+        $(this).remove();
+    });
 })

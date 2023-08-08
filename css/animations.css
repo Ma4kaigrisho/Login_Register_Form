@@ -38,3 +38,9 @@
     opacity: 1;
   }
 }
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
