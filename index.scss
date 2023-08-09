@@ -44,14 +44,64 @@ body{
 button{
     cursor: pointer;
 }
-button:hover{
+.sub:hover{
     background: linear-gradient(90deg,#d50fff, #44199a);
 }
-button .btn-ripple{
+.sub .btn-ripple{
     background: rgba(255, 255, 255, 0.3);
     position: absolute;
     border-radius: 100%;
     transform: scale(0);
     animation: ripple 1s forwards;
 }
-
+.btn a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.additional{
+    display: none;
+}
+.login, .register{
+    padding-bottom: 100px !important;
+}
+.wrapper{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+    .icon{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 60px;
+        i{
+            font-size: 25px;
+            line-height: 60px;
+            transition: all 0.3s ease-out;
+        }
+        span{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 60px;
+            margin-left: 10px;
+        }
+    }
+}
+.wrapper .button:hover{
+    width: 200px;
+}

@@ -32,7 +32,7 @@ $(document).ready(function(){
         this.top = posY - (this.height * 0.5);
         this.left = posX - (this.width * 0.5);
     }
-    $("button").on("mousedown",function(e){
+    $(".sub").on("mousedown",function(e){
         var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
         console.log("Ripple element created: ", rippleEl);
 
@@ -53,4 +53,12 @@ $(document).ready(function(){
     $('.btn').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.btn-ripple', function(){
         $(this).remove();
       });
+    $('.accordion-header').click(function() {
+        var accordionContent = $(this).next('.accordion-content');
+        var isCollapsed = accordionContent.css('display') === 'none';
+        $('.accordion-content').slideUp();
+        if (isCollapsed) {
+            accordionContent.slideDown();
+        }
+    });
 })
