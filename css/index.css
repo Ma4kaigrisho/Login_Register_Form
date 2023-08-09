@@ -109,6 +109,14 @@ button {
   cursor: pointer;
 }
 
+.sub {
+  position: absolute;
+}
+
+.movebtn {
+  margin-top: 50px;
+}
+
 .sub:hover {
   background: linear-gradient(90deg, #d50fff, #44199a);
 }

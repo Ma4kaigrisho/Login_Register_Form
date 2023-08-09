@@ -44,6 +44,12 @@ body{
 button{
     cursor: pointer;
 }
+.sub{
+    position: absolute;
+}
+.movebtn{
+    margin-top: 50px;
+}
 .sub:hover{
     background: linear-gradient(90deg,#d50fff, #44199a);
 }
@@ -105,7 +111,4 @@ button{
     border-bottom: 1px solid red !important;
     color: red;
     animation: shake 0.3s linear;
-}
-.accordion{
-    
 }
