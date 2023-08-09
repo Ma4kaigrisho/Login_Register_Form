@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var example_usrname = "example";
+    var example_passwd = "example123"
     $("form").submit(function(event){
         event.preventDefault();
     })
@@ -61,4 +63,22 @@ $(document).ready(function(){
             accordionContent.slideDown();
         }
     });
+    $("#login").on("click",function(){
+        input_usr = $("#username").val();
+        input_passwd = $("#passwd").val();
+        console.log(input_usr)
+        console.log(input_passwd)
+        if( input_usr != example_usrname || input_passwd != example_passwd){
+            $("#passwd").val("");
+            $("#username").addClass("wrong");
+            $("#passwd").addClass("wrong");
+            setTimeout(function(){
+                $("#username").removeClass("wrong");
+                $("#passwd").removeClass("wrong");
+            },500)
+        }
+        else{
+            window.location.href='second.html';
+        }
+    })
 })

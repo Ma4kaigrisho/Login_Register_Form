@@ -54,10 +54,6 @@ button{
     transform: scale(0);
     animation: ripple 1s forwards;
 }
-.btn a{
-    text-decoration: none;
-    color: antiquewhite;
-}
 .additional{
     display: none;
 }
@@ -104,4 +100,12 @@ button{
 }
 .wrapper .button:hover{
     width: 200px;
+}
+.wrong{
+    border-bottom: 1px solid red !important;
+    color: red;
+    animation: shake 0.3s linear;
+}
+.accordion{
+    
 }

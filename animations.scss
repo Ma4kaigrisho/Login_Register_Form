@@ -44,3 +44,17 @@
         opacity: 0;
     }
 }
+@keyframes shake{
+    20%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(-5px);
+    }
+    90%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

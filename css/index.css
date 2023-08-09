@@ -44,6 +44,20 @@
     opacity: 0;
   }
 }
+@keyframes shake {
+  20% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  90% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 body {
   background-color: aliceblue;
 }
@@ -107,11 +121,6 @@ button {
   animation: ripple 1s forwards;
 }
 
-.btn a {
-  text-decoration: none;
-  color: antiquewhite;
-}
-
 .additional {
   display: none;
 }
@@ -162,4 +171,10 @@ button {
 
 .wrapper .button:hover {
   width: 200px;
+}
+
+.wrong {
+  border-bottom: 1px solid red !important;
+  color: red;
+  animation: shake 0.3s linear;
 }
